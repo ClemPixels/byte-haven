@@ -13,8 +13,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Cloud Clove",
-  description: "The only solution you ever need for secure files storage.",
+  title: "ByteHaven",
+  description: "Where your data feels safe.",
 };
 
 export default function RootLayout({

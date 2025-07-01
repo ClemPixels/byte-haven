@@ -7,9 +7,13 @@ const Layout = ({ children }: Children) => {
     <main className="flex items-center justify-center w-full h-screen">
       <div className="flex-1 w-full h-full bg-primary md:flex items-center justify-center p-6 hidden">
         <div>
-          <h1 className={cn("text-white tracking-wider")}>Cloud Clove</h1>
+          <h1 className={cn("text-white tracking-wider")}>ByteHaven</h1>
+          <P className="text-white italic">Where your data feels safe.</P>
           <P className="text-white">
-            The only solution you ever need for secure files storage.
+            ByteHaven is a sleek and secure cloud file system for storing,
+            organizing, and accessing your data from anywhere. Whether
+            you&apos;re a creative, student, or developer, ByteHaven keeps your
+            digital life in sync.
           </P>
         </div>
       </div>
