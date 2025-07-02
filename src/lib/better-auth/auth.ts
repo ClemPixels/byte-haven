@@ -8,7 +8,7 @@ import db from "../database/db";
 import { Subscription } from "../database/schema/subscription.model";
 import { ObjectId } from "mongodb";
 
-const dbClient = client.db();
+const dbClient = await client.db();
 
 export const auth = betterAuth({
   database: mongodbAdapter(dbClient),

@@ -38,7 +38,7 @@ const PageFiles = ({ page }: PageFilesProps) => {
 
       queryClient.setQueryData(["files", page], (oldData: unknown) => {
         const oldFiles = (oldData as { files: IFile[] })?.files || [];
-        const newFiles = newData.files as IFile[] || [];
+        const newFiles = (newData.files as IFile[]) || [];
 
         // Ensure no duplicates using a Set or filtering by `_id`
         const mergedFiles = [

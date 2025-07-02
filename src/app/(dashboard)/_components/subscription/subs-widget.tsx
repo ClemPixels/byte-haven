@@ -70,7 +70,7 @@ const SubscriptionCancellationWidget = ({ isLoading, subs }: Props) => {
 
   return (
     <>
-      <div className="relative overflow-hidden rounded-lg border-2 border-red-500/20 bg-gradient-to-r from-red-500/5 to-background p-6 shadow-lg transition-all hover:shadow-xl group">
+      <div className="relative overflow-hidden rounded-lg border-2 border-red-500/20 bg-gradient-to-r from-red-500/10 to-background p-6 shadow-lg transition-all hover:shadow-xl group">
         <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] dark:bg-grid-dark/10" />
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 relative z-10">
