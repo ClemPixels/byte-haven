@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 
-import { RiGoogleFill, RiGithubFill, RiLoader3Fill } from "@remixicon/react";
+import { RiGithubFill, RiLoader3Fill } from "@remixicon/react";
 import { authClient } from "@/lib/better-auth/auth-client";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
