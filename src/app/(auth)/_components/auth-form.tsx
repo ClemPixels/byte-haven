@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 
-import { RiGoogleFill, RiLoader3Fill } from "@remixicon/react";
+import { RiGoogleFill, RiGithubFill, RiLoader3Fill } from "@remixicon/react";
 import { authClient } from "@/lib/better-auth/auth-client";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
@@ -69,6 +69,46 @@ const AuthForm = ({ action }: Props) => {
         >
           {!isLoading ? (
             <RiGoogleFill />
+          ) : (
+            <RiLoader3Fill className="animate-spin" />
+          )}{" "}
+          {action} with google
+        </Button>
+        {/* GITHUB */}
+        <Button
+          variant="lift"
+          disabled={isLoading}
+          onClick={async () => {
+            await authClient.signIn.social(
+              {
+                provider: "github",
+                callbackURL: "/dashboard",
+              },
+              {
+                onSuccess: () => {
+                  toast({
+                    title: "Success",
+                    description: "Redirection to github sign in page",
+                  });
+                },
+                onError: (c) => {
+                  toast({
+                    title: "Error",
+                    description: c.error.message,
+                  });
+                },
+                onRequest: () => {
+                  setIsLoading(true);
+                },
+                onResponse: () => {
+                  setIsLoading(false);
+                },
+              }
+            );
+          }}
+        >
+          {!isLoading ? (
+            <RiGithubFill />
           ) : (
             <RiLoader3Fill className="animate-spin" />
           )}{" "}
