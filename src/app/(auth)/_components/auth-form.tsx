@@ -35,7 +35,7 @@ const AuthForm = ({ action }: Props) => {
         <CardDescription>{action} to access your account</CardDescription>
       </CardHeader>
       <CardContent className="space-y-3">
-        <Button
+        {/* <Button
           variant="lift"
           disabled={isLoading}
           onClick={async () => {
@@ -73,7 +73,7 @@ const AuthForm = ({ action }: Props) => {
             <RiLoader3Fill className="animate-spin" />
           )}{" "}
           {action} with google
-        </Button>
+        </Button> */}
         {/* GITHUB */}
         <Button
           variant="lift"
@@ -112,7 +112,7 @@ const AuthForm = ({ action }: Props) => {
           ) : (
             <RiLoader3Fill className="animate-spin" />
           )}{" "}
-          {action} with google
+          {action} with github
         </Button>
 
         <P
