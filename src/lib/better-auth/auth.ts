@@ -2,7 +2,7 @@ import { betterAuth } from "better-auth";
 import { nextCookies } from "better-auth/next-js";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
 import client from "./db";
-import { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET } from "../env";
+import { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } from "../env";
 import { createAuthMiddleware } from "better-auth/api";
 import db from "../database/db";
 import { Subscription } from "../database/schema/subscription.model";
@@ -16,6 +16,10 @@ export const auth = betterAuth({
     google: {
       clientId: GOOGLE_CLIENT_ID,
       clientSecret: GOOGLE_CLIENT_SECRET,
+    },
+    github: {
+      clientId: GITHUB_CLIENT_ID,
+      clientSecret: GITHUB_CLIENT_SECRET,
     },
   },
   hooks: {
