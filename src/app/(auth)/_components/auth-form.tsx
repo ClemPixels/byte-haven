@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 
-import { RiGithubFill, RiLoader3Fill } from "@remixicon/react";
+import { RiGithubFill, RiGoogleFill, RiLoader3Fill } from "@remixicon/react";
 import { authClient } from "@/lib/better-auth/auth-client";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
@@ -35,7 +35,7 @@ const AuthForm = ({ action }: Props) => {
         <CardDescription>{action} to access your account</CardDescription>
       </CardHeader>
       <CardContent className="space-y-3">
-        {/* <Button
+      <Button
           variant="lift"
           disabled={isLoading}
           onClick={async () => {
@@ -73,7 +73,7 @@ const AuthForm = ({ action }: Props) => {
             <RiLoader3Fill className="animate-spin" />
           )}{" "}
           {action} with google
-        </Button> */}
+        </Button> 
         {/* GITHUB */}
         <Button
           variant="lift"
@@ -82,7 +82,6 @@ const AuthForm = ({ action }: Props) => {
             await authClient.signIn.social(
               {
                 provider: "github",
-                callbackURL: "/dashboard",
               },
               {
                 onSuccess: () => {
